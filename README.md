@@ -50,13 +50,10 @@
 - sqlalchemy
 
 
-### Data and cleaning details:
+### Data Overview:
 
 The data in this project comes from a modified version of the figure-eight [disaster response data](https://www.figure-eight.com/dataset/combined-disaster-response-data/). In general it was pretty clean, the primary transform steps of the ETL are to a remove a few values that don't match up between the categories/messages data and remove a few bad remaining values.
 
-For example the yes/no values are 1/2 in the original data but 0/1 in the provided data. However, a few 2s remained and are replaced with 0s.
+This dataset contains 30,000 messages drawn from events including an earthquake in Haiti in 2010, an earthquake in Chile in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters.
 
-
-### Some thoughts on the classifier:
-
-The distribution of many classes is extremely skewed with very few 1 values. The classifier in this project was not optimized very well to work in this case - in a real world application I would increase the weight of recall in the score significantly in order to catch more of these low representation classes.
+The data has been encoded with 36 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety.
